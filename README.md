@@ -184,7 +184,9 @@ def compose(fn1, fn2):
 
 図 List 関手
 
+![List 関手](images/関手.drawio.png)
 
+![List 関手](images/関手_2.drawio.png)
 
 - List 関手によって対象を圏 A から圏 B に写した。→[関手_2.py](./関手_2.py)を参照
 - 対象を写したので、次に射を写す。
@@ -217,7 +219,7 @@ def F(fn):
 結論は、関手の定義から言って、 `F(g)·F(f) = F(g·f)`が成り立つ必要がある。成り立たない場合、関手ではない。
 
 
-
+---
 
 # Python による実装
 射 F(f), 射 F(g)の合成射 F(g)·F(f) は射 F(g·f) と等しいことを確認した。→[関手_合成射.py](./関手_合成射.py)を参照
@@ -266,7 +268,12 @@ if __name__ == "__main__":
 3. 要素に対し、関数 f を実行する
 4. 実行結果を要素として、新しい Option インスタンスを生成する
 
-# Option List 関手
+---
+
+# Option 関手,  List 関手
+
+図 Option 関手
+![Option_List関手](images/Option_List関手.drawio.png)
 
 
 
@@ -324,17 +331,30 @@ def map(self, fn):
 
 重要なのは、それぞれに処理を行ったあと、最終的には Option の要素にすること。
 
+---
+
 # 自然変換
-- さらに、Option 関手と List 関手の対象の間に矢印 H を追加する。
+
+さらに、Option 関手と List 関手の対象の間に矢印 H を追加する。
+
+図：自然変換
+![自然変換](images/自然変換.drawio.png)
 
 
+この H は G から F への射と言える。(らしい)
 
-この H は G から F への射と言える。射 $H : F → G$
+$H:G \to F$
 
-
+![図:射 H](images/射H.drawio.png)
 
 
 # 参考資料
+主な参考元
+
+- category theory for python: yomutukuruwakaru (Japanese Edition). Kindle Edition.
+
+本来読みたかったが、断念した本
+
 - category theory for programmers https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/
   - 有志による翻訳版：プログラマのための圏論 https://zenn.dev/taketo1024/books/850b20937af93b
-- category theory for python: yomutukuruwakaru (Japanese Edition). Kindle Edition.
+
