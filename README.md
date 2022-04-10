@@ -345,6 +345,10 @@ def map(self, fn):
 
 $H:G → F$
 
+```math
+H:G \to F
+```
+
 ![図:射 H](images/射H.drawio.png)
 
 
