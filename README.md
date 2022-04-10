@@ -343,7 +343,7 @@ def map(self, fn):
 
 この H は G から F への射と言える。(らしい)
 
-$H:G \to F$
+$H:G → F$
 
 ![図:射 H](images/射H.drawio.png)
 
