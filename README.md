@@ -345,12 +345,45 @@ def map(self, fn):
 
 $H:G → F$
 
-```math
-H:G \to F
-```
-
 ![図:射 H](images/射H.drawio.png)
 
+
+### 自然変換
+
+$F(F) \cdot H[str] = H[int] \cdot G(f)$
+
+上記の式が成り立つとき、H を自然変換という。
+
+これは道順が違ってもスタートとゴールが同じみたいなイメージ？
+
+
+```python
+
+def H(option):
+    return option.tolist()
+
+# 圏 B の対象 Option[str]
+B_x = Option('Books')
+
+# H[int] · G(f)
+H_G_F = compose(G(f), H)
+
+# F(f)·H[str]
+F_f_H = compose(H, F(f))
+
+print(H_G_f(B_x)[0])
+print(F_f_H(B_x)[0])
+
+```
+
+上記の2つが同じ結果になっていることが、python スクリプト[自然変換.py](./自然変換.py)実行でわかる。
+
+これにより、自然変換を確認した。
+
+
+# まとめ
+
+この本で、python の型変換により、圏論の基礎的が概念の一部を python を使って学べた。以降は、[Category Theory for Programmer](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/)等を使って学びたい。
 
 # 参考資料
 主な参考元
